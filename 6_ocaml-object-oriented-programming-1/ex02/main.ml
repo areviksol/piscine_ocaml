@@ -2,14 +2,14 @@ let () =
   Random.self_init ();
 
   (* Create humans (people) *)
-  let amy = new people "Amy" in
-  let rory = new people "Rory" in
+  let amy = new People.people "Amy" in
+  let rory = new People.people "Rory" in
 
-  (* Create a doctor with Amy as sidekick *)
-  let the_doc = new doctor "Tenth" 900 amy in
+  (* Create a Doctor.doctor with Amy as sidekick *)
+  let the_doc = new Doctor.doctor "Tenth" 900 amy in
 
-  (* Create a dalek *)
-  let d = new dalek () in
+  (* Create a Dalek.dalek *)
+  let d = new Dalek.dalek () in
 
   (* Show initial states *)
   Printf.printf "\nInitial states:\n";

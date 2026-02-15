@@ -1,9 +1,9 @@
 (* create several people to test everything *)
 let () =
   (* Creation messages from initializer will be printed when objects are built *)
-  let alice = new people "Alice" in
-  let rory = new people "Rory" in
-  let the_doctor = new people "The Doctor" in
+  let alice = new People.people "Alice" in
+  let rory = new People.people "Rory" in
+  let the_doctor = new People.people "The Doctor" in
 
   (* Test to_string for each object *)
   Printf.printf "to_string Alice: %s\n" (alice#to_string);
@@ -20,7 +20,7 @@ let () =
   rory#die;
 
   (* More instances to prove initializer and methods consistently work *)
-  let clara = new people "Clara" in
+  let clara = new People.people "Clara" in
   Printf.printf "to_string Clara: %s\n" (clara#to_string);
   clara#talk;
 

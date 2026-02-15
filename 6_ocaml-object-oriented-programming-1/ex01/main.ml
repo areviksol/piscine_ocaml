@@ -1,11 +1,11 @@
 let () =
   (* Create people sidekicks *)
-  let amy = new people "Amy" in
-  let rory = new people "Rory" in
+  let amy = new People.people "Amy" in
+  let rory = new People.people "Rory" in
 
   (* Create doctors with sidekicks *)
-  let doc1 = new doctor "Eleven" 1100 amy in
-  let doc2 = new doctor "Twelve" 1200 rory in
+  let doc1 = new Doctor.doctor "Eleven" 1100 amy in
+  let doc2 = new Doctor.doctor "Twelve" 1200 rory in
 
   (* Basic to_string and talk tests *)
   Printf.printf "doc1: %s\n" (doc1#to_string);

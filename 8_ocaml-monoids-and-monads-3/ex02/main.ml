@@ -1,5 +1,8 @@
-module Calc_int = Calc(MONOID.INT)
-module Calc_float = Calc(MONOID.FLOAT)
+open Monoid
+open Calc
+
+module Calc_int = Calc(INT)
+module Calc_float = Calc(FLOAT)
 
 let () =
   Printf.printf "Testing INT monoid:\n";

@@ -1,7 +1,8 @@
-class doctor (name : string) (age_init : int) (sidekick : people) = object (self)
+class doctor (name : string) (age_init : int) (sidekick : People.people) =
+   object (self)
   val name : string = name
   val mutable age : int = age_init
-  val sidekick : people = sidekick
+  val sidekick : People.people = sidekick
   val mutable hp : int = 100
 
   method to_string : string =

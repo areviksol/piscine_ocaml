@@ -1,5 +1,5 @@
 let () =
-  let module T = Try in
+  let module T = Try_monad.Try in
 
   Printf.printf "Testing return:\n";
   let s1 = T.return 10 in
