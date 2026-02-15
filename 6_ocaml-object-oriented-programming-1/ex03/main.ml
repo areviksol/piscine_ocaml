@@ -2,7 +2,6 @@ let print_count (label : string) (n : int) : unit =
   Printf.printf "%s members: %d\n" label n
 
 let () =
-  (* People army *)
   let p1 = new People.people "Amy" in
   let p2 = new People.people "Rory" in
   let pa0 = new Army.army ([] : People.people list) in
@@ -12,7 +11,6 @@ let () =
   let pa3 = pa2#delete in
   print_count "People army after delete" (List.length pa3#members);
 
-  (* Dalek army *)
   let d1 = new Dalek.dalek in
   let d2 = new Dalek.dalek in
   let da0 = new Army.army ([] : Dalek.dalek list) in
@@ -22,7 +20,6 @@ let () =
   let da3 = da2#delete in
   print_count "Dalek army after delete" (List.length da3#members);
 
-  (* Doctor army (if your doctor constructor needs a sidekick, give it one) *)
   let sidekick = new People.people "Clara" in
   let doc1 = new Doctor.doctor "Eleven" 1100 sidekick in
   let doc2 = new Doctor.doctor "Twelve" 1200 sidekick in

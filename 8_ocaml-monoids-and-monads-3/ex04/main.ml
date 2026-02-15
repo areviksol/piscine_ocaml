@@ -17,14 +17,11 @@ let () =
   Printf.printf "s3 (inter): "; S.foreach s3 (fun x -> Printf.printf "%d " x); print_endline "";
   Printf.printf "s4 (diff): "; S.foreach s4 (fun x -> Printf.printf "%d " x); print_endline "";
 
-  (* Bind example *)
   let s5 = S.bind s1 (fun x -> S.return (x*10)) in
   Printf.printf "s5 (bind *10): "; S.foreach s5 (fun x -> Printf.printf "%d " x); print_endline "";
 
-  (* Filter example *)
   let s6 = S.filter s5 (fun x -> x > 10) in
   Printf.printf "s6 (filter > 10): "; S.foreach s6 (fun x -> Printf.printf "%d " x); print_endline "";
 
-  (* For_all & exists *)
   Printf.printf "for_all > 0 in s5: %b\n" (S.for_all s5 (fun x -> x > 0));
   Printf.printf "exists = 20 in s5: %b\n" (S.exists s5 (fun x -> x = 20));

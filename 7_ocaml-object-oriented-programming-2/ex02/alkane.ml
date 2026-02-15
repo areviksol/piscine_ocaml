@@ -27,7 +27,6 @@ object
   inherit Molecule.molecule name atoms
 end
 
-(* Concrete alkanes *)
 
 class methane =
 object

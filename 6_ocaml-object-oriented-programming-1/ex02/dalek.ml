@@ -1,4 +1,3 @@
-(* Allowed modules used: Pervasives (builtin), String, Random *)
 class dalek () = object (self)
   val name : string =
     let len = 3 in

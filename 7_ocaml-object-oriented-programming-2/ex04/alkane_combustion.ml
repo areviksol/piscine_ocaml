@@ -14,7 +14,6 @@ object (self)
   inherit Reaction.reaction [] []
 
   method private total_atoms () =
-    (* compute total C and H atoms *)
     let rec sum (c,h) lst =
       match lst with
       | [] -> (c,h)
@@ -28,7 +27,6 @@ object (self)
           sum (c+n_c, h+n_h) t
     in sum (0,0) alkanes
 
-  (* ✅ self is valid only here inside a method *)
   method balance =
     let (total_c, total_h) = self#total_atoms () in
     let n_co2 = total_c in

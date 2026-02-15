@@ -1,6 +1,5 @@
 class doctor (name_init : string) (age_init : int) (sidekick_init : People.people) =
 object (self)
-  (* attributes *)
   val name : string = name_init
   val age : int = age_init
   val hp : int = 100
@@ -15,19 +14,16 @@ object (self)
   method use_sonic_screwdriver : unit =
     Printf.printf "Whiii-whiii-whiii! (sonic screwdriver)\n"
 
-  (* Functional damage: returns a NEW doctor with updated hp *)
   method take_damage (dmg : int) =
     let dmg_pos = if dmg < 0 then 0 else dmg in
     let new_hp = hp - dmg_pos in
     let clamped_hp = if new_hp < 0 then 0 else new_hp in
     {< hp = clamped_hp >}
 
-  (* Private regeneration: returns a NEW doctor (hp reset, age + 1) *)
   method private regenerate =
     Printf.printf "Regeneration energy! New face... same Doctor.\n";
     {< hp = 100; age = age + 1 >}
 
-  (* Travel in time: backward triggers regeneration; forward just prints *)
   method travel_in_time (start_year : int) (arrival_year : int) =
     if arrival_year < start_year then self#regenerate
     else (

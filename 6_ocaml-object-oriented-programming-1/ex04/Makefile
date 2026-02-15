@@ -13,7 +13,7 @@ $(NAME): $(OBJ)
 	$(OCAMLOPT) -c $<
 
 clean:
-	rm -f *.cmx *.cmi *.o
+	rm -f *.cmx *.cmi *.o timewar
 
 fclean: clean
 	rm -f $(NAME)

@@ -13,7 +13,6 @@ class doctor (name : string) (age_init : int) (sidekick : People.people) =
     Printf.printf "Hi! I'm the Doctor!\n"
 
   method travel_in_time (start : int) (arrival : int) : unit =
-    (* change age logically: new age = old age + (arrival - start) *)
     let delta = arrival - start in
     age <- age + delta;
     (* draw a simple TARDIS ascii art *)
@@ -35,7 +34,6 @@ class doctor (name : string) (age_init : int) (sidekick : People.people) =
   method use_sonic_screwdriver : unit =
     Printf.printf "Whiiiiwhiiiwhiii Whiiiiwhiiiwhiii Whiiiiwhiiiwhiii\n"
 
-  (* helper methods for testing/debugging *)
   method take_damage (d : int) : unit =
     if d <= 0 then () else hp <- (if hp - d < 0 then 0 else hp - d)
 

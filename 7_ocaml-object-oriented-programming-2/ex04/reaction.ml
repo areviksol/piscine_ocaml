@@ -9,14 +9,12 @@ object
   method virtual is_balanced : bool
 end
 
-(* Molecule needed for reactions *)
 class dioxygen =
 object
   inherit Molecule.molecule "Dioxygen"
     [ new Atom.oxygen; new Atom.oxygen ]
 end
 
-(* Methane combustion reaction *)
 class methane_combustion =
 object (self)
   inherit reaction

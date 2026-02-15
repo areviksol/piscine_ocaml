@@ -1,6 +1,5 @@
 type hour = int
 
-(* Zero is 12 on a 12-hour clock *)
 let zero : hour = 12
 
 let normalize h =

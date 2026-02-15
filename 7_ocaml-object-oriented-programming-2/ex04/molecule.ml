@@ -63,7 +63,6 @@ object (self)
 
 end
 
-(* Concrete molecules *)
 
 class water =
 object
