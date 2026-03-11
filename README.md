@@ -1,29 +1,37 @@
-Chapter II
-General rules
-• Your project must be realized in a virtual machine.
-• Your virtual machine must have all the necessary software to complete your project.
-These softwares must be configured and installed.
-• You can choose the operating system to use for your virtual machine.
-• You must be able to use your virtual machine from a cluster computer.
-• You must use a shared folder between your virtual machine and your host machine.
-• During your evaluations you will use this folder to share with your repository.
-• Your functions should not quit unexpectedly (segmentation fault, bus error, double
-free, etc) apart from undefined behaviors. If this happens, your project  will be
-considered non functional and will receive a 0 during the evaluation.
-• We encourage you to create test programs for your project even though this work
-won’t have to be submitted and won’t be graded. It will give you a chance
-to easily test your work and your peers’ work. You will find those tests especially
-useful during your defence. Indeed, during defence, you are free to use your tests
-and/or the tests of the peer you are evaluating.
-• Submit your work to your assigned git repository. Only the work in the git repository will be graded. If Deepthought is assigned to grade your work, it will be done
-after your peer-evaluations. If an error happens in any section of your work during
-Deepthought’s grading, the evaluation will stop.
+# OCaml Piscine
 
+This repository contains my exercises and materials for the `Piscine OCaml`.
 
-5
-5
-3
-5
-4
-3
-5
+## Structure
+
+- `0_ocaml-basic-syntax-and-semantics-0` - basic syntax and semantics
+- `1_ocaml-recursion-and-higher-order-functions-0` - recursion and higher-order functions
+- `2_Pattern Matching and Data Types - 0` - pattern matching and data types
+- `3_OCaml’s modules language - 1` - OCaml module system
+- `4_Imperative features - 1` - imperative features
+- `5_OCAML - Functor - 1` - functors
+- `6_ocaml-object-oriented-programming-1` - object-oriented programming in OCaml (part 1)
+- `7_ocaml-object-oriented-programming-2` - object-oriented programming in OCaml (part 2)
+- `8_ocaml-monoids-and-monads-3` - monoids and monads
+
+## How to run exercises
+
+Most exercise directories include a `Makefile`. Typical flow:
+
+```bash
+cd "<exercise_folder>/<exXX>"
+make
+./<executable_name>
+```
+
+If there is no `Makefile`, you can compile manually:
+
+```bash
+ocamlc -o main *.ml
+./main
+```
+
+## Notes
+
+- Assignment statements are in `en.subject.pdf` (in the root and/or inside module folders).
+- For a clean build, use `make clean` or `make fclean` when available.
