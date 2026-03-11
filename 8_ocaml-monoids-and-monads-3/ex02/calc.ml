@@ -1,3 +1,5 @@
+open Monoid
+
 module Calc =
 functor (M : MONOID) ->
 struct

@@ -6,7 +6,7 @@ all:
 	ocamlopt -o $(NAME) $(SRC)
 
 clean:
-	rm -f *.cmi *.cmx *.o
+	rm -f *.cmi *.cmx *.o calc
 
 fclean: clean
 	rm -f $(NAME)

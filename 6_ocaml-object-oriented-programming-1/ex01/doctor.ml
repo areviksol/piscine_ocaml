@@ -1,7 +1,8 @@
-class doctor (name : string) (age_init : int) (sidekick : people) = object (self)
+class doctor (name : string) (age_init : int) (sidekick : People.people) =
+   object (self)
   val name : string = name
   val mutable age : int = age_init
-  val sidekick : people = sidekick
+  val sidekick : People.people = sidekick
   val mutable hp : int = 100
 
   method to_string : string =
@@ -12,7 +13,6 @@ class doctor (name : string) (age_init : int) (sidekick : people) = object (self
     Printf.printf "Hi! I'm the Doctor!\n"
 
   method travel_in_time (start : int) (arrival : int) : unit =
-    (* change age logically: new age = old age + (arrival - start) *)
     let delta = arrival - start in
     age <- age + delta;
     (* draw a simple TARDIS ascii art *)
@@ -34,7 +34,6 @@ class doctor (name : string) (age_init : int) (sidekick : people) = object (self
   method use_sonic_screwdriver : unit =
     Printf.printf "Whiiiiwhiiiwhiii Whiiiiwhiiiwhiii Whiiiiwhiiiwhiii\n"
 
-  (* helper methods for testing/debugging *)
   method take_damage (d : int) : unit =
     if d <= 0 then () else hp <- (if hp - d < 0 then 0 else hp - d)
 

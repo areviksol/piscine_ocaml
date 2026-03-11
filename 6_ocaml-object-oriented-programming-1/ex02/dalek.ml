@@ -1,4 +1,3 @@
-(* Allowed modules used: Pervasives (builtin), String, Random *)
 class dalek () = object (self)
   val name : string =
     let len = 3 in
@@ -27,7 +26,7 @@ class dalek () = object (self)
     let idx = Random.int (Array.length phrases) in
     self#say_rand phrases.(idx)
 
-  method exterminate (p : people) : unit =
+  method exterminate (p : People.people) : unit =
     (* toggle shield each use *)
     shield <- not shield;
     (* announce and kill the target *)

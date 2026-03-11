@@ -9,7 +9,7 @@ sig
   val sub : element -> element -> element
 end
 
-module INT : MONOID =
+module INT =
 struct
   type element = int
   let zero1 = 0
@@ -21,7 +21,7 @@ struct
   let div a b = a / b
 end
 
-module FLOAT : MONOID =
+module FLOAT =
 struct
   type element = float
   let zero1 = 0.0
